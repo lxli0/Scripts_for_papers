@@ -27,7 +27,7 @@ This is a repository containing the code to generate the results in the paper **
 
 **Reference:**
 
-Li, L., Li, J., & Song, X.. (in preparation). Modeling seismic velocity changes caused by seasonal hydrosphere variations.
+Li, L., Li, J., & Song, X. (in preparation). Modeling seismic velocity changes caused by seasonal hydrosphere variations.
 
 **Contact:**
 
