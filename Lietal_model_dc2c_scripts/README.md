@@ -11,6 +11,7 @@ This is a repository containing the code to generate the results in the paper **
 "test_stress_sensitivity.m" is used to generate the results in Section 4.2.
 "out_test_stress_sensitivity" is used to generate Figures 6 and S5.
 "out_model_result_SI.m" is used to generate Figures S3 and S4.
+"Map" is used to generate Figure S1 using GMT.
 
 **Reference:**
 Li, L., Li, J., & Song, X.. (in preparation). Modeling seismic velocity changes caused by seasonal hydrosphere variations.
