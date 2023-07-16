@@ -6,6 +6,7 @@ This is a repository containing the code to generate the results in the paper **
 
 **Main scripts:**
 "velocity_KV.m" is used to plot Figure 3.
+
 "main.m" is used to calculate the dc/c under different GWS assumptions and hydraulic coefficients (results are stored in .mat).
 "out_model_result_maintextt.m" is used to generate Figures 4, 5, and S2.
 "test_stress_sensitivity.m" is used to generate the results in Section 4.2 (results are stored in .mat).
