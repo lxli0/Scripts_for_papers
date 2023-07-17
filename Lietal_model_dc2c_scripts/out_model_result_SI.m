@@ -77,7 +77,6 @@ for i=1:length(frequency)/length(depth)
     end
 end
 
-%% plot
 Freq=FRE(1,:);
 for j=1:length(Freq)
     [amplitude_loading(j),ind]=max(dc2c_loading(j,:));
@@ -92,6 +91,7 @@ for j=1:length(Freq)
         depth_eff(j,k)=depth_eff0(j,ind,k);
     end
 end
+
 %% plot
 %dc2c
 figure('units','normalized','position',[0.1,0.1,0.6,0.2])
@@ -129,11 +129,6 @@ ylim([0 5e-3])
 
 %origin depth
 figure('units','normalized','position',[0.1,0.1,0.3,0.3])
-color=1/255*[
-    192 137 44
-    63 124 88
-    30 87 181
-    ];
 for j=1:3
     plot(Freq,depth_eff(:,j),'-','color',color(j,:),'linewidth',2.5);
     hold on;
