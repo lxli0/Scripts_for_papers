@@ -77,7 +77,6 @@ for i=1:length(frequency)/length(depth)
     end
 end
 
-%% plot
 Freq=FRE(1,:);
 for j=1:length(Freq) % D=1m/s^2
     [amplitude_loading(j),ind]=max(dc2c_loading(j,:));
@@ -92,6 +91,7 @@ for j=1:length(Freq) % D=1m/s^2
     phase_eff(j)=t0(ind);
     depth_eff(j)=depth_eff0(j,ind,2);
 end
+
 %% plot
 figure('units','normalized','position',[0.1,0.1,0.6,0.6])
 subplot(2,2,1) % dc2c_loading
@@ -133,7 +133,6 @@ figure('units','normalized','position',[0.1,0.1,0.6,0.6])
 subplot(2,2,1) % dc2c_pp
 sm=pcolor(t0_plot',Freq_plot',dc2c_pp(:,:,2));
 set(sm,'FaceColor','interp','EdgeColor','none')
-load('vik.mat');
 colormap(vik);
 %h=colorbar;
 caxis([-4e-3 4e-3])
@@ -149,7 +148,6 @@ grid on;
 subplot(2,2,3) %dc2c_effective
 sm=pcolor(t0_plot',Freq_plot',dc2c_eff(:,:,2));
 set(sm,'FaceColor','interp','EdgeColor','none')
-load('vik.mat');
 colormap(vik);
 %h=colorbar;
 caxis([-4e-3 4e-3])
