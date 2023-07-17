@@ -133,7 +133,6 @@ grid on;
 subplot(2,2,3)
 sm=pcolor(t0_plot',Freq_plot',dc2c_pp(:,:,2));
 set(sm,'FaceColor','interp','EdgeColor','none')
-load('vik.mat');
 colormap(vik);
 %h=colorbar;
 caxis([-4e-3 4e-3])
@@ -149,7 +148,6 @@ grid on;
 subplot(2,2,4)
 sm=pcolor(t0_plot',Freq_plot',dc2c_eff(:,:,2));
 set(sm,'FaceColor','interp','EdgeColor','none')
-load('vik.mat');
 colormap(vik);
 %h=colorbar;
 caxis([-4e-3 4e-3])
