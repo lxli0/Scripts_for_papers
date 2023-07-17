@@ -98,10 +98,9 @@ figure('units','normalized','position',[0.1,0.1,0.6,0.6])
 subplot(2,2,1)
 plot(t0/dt0/year2dt0*12,F/9.8,'-k','linewidth',2.5);
 hold on;
-     [dt0_pp,year2dt0_pp,t0_pp,F_pp]=generate_waterload(2/3*350,1,1);
-     plot(t0/dt0/year2dt0*12,F_pp/9.8,'--k','linewidth',2.5);
-    hold on;
-
+[dt0_pp,year2dt0_pp,t0_pp,F_pp]=generate_waterload(2/3*350,1,1);
+plot(t0/dt0/year2dt0*12,F_pp/9.8,'--k','linewidth',2.5);
+hold on;
 set(gca,'xtick',0.5:1:11.5);
 set(gca,'xticklabel',{'Jan',' ','Mar',' ','May',' ','Jul',' ','Sep',' ','Nov',' '}); 
 box on;
