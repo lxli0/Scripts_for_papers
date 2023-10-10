@@ -1,0 +1,10 @@
+x=1e-1:2e2;
+logx=log10(x);
+y1=10.^(-1.347*logx-6.882);
+y2=10.^(-0.185*logx.^2-logx-6.261);
+y3=10.^(0.220*logx.^2-1.543*logx-7.938);
+loglog(x,y1,'linewidth',5,'color',[0.75 0.75 0.75]);
+hold on;
+loglog(x,y2,'linewidth',5,'color',[0.75 0.75 0.75]);
+hold on;
+loglog(x,y3,'linewidth',5,'color',[0.75 0.75 0.75]);
