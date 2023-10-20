@@ -3,5 +3,5 @@ I am sharing here the code to reproduce my papers. One can use them to directly 
 
 Folder | Paper 
 --- | ---  
-Lietal_model_dc2c_scripts | Li, L., Li, J., & Song, X. (in preparation). Modeling seismic velocity changes caused by seasonal hydrosphere variations.
+Lietal_model_dc2c_scripts | Li, L., Li, J., Song, X., & Tsai, V. C. (in preparation). Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust.
 LiandLuo_realtime_bvalue_scripts | Li, L., & Luo, G. (under review). Can we obtain reliable seismic b-values for real-time catalogs?.
