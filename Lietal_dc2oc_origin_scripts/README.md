@@ -1,4 +1,4 @@
-This is a repository containing the code to generate the results in the paper **"Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust"**, by *Linxuan Li1, Jiangtao Li1, Xiaodong Song, and Victor C. Tsai*.
+This is a repository containing the code to generate the results in the paper **"Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust"**, by *Linxuan Li1, Jiangtao Li1, and Xiaodong Song*.
 
 **Data files:**
 
@@ -23,7 +23,7 @@ Contains the the scripts and original data (.xlsx) for reproducing Figure 2. One
 
 **Reference:**
 
-Li, L., Li, J., Song, X., & Tsai, V. C. (in preparation). Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust.
+Li, L., Li, J., & Song, X. (submitted). Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust.
 
 **Contact:**
 
