@@ -1,0 +1,138 @@
+%{
+clc,clear
+dmcorner_TGR0=[1 0.5];
+b=1;
+L0=[100 200 400 800];
+mmin_set=0;
+mmin_true=mmin_set;
+Mmin_set=10^(1.5*(mmin_true+6.07));
+
+rep_times=100;
+size1=length(dmcorner_TGR0);
+size2=length(L0);
+mcorner_TGR_est=zeros(size1,size2,rep_times);
+
+for k=1:size1
+    for j=1:size2
+        L=L0(j);
+        mcorner_TGR=zeros(1,length(L));
+        for i = 1:L
+            mcorner_TGR(i)=log10(i)/b-dmcorner_TGR0(k);
+        end
+        mean_mco(k,j)=mean(mcorner_TGR);
+
+        parpool(8);
+        parfor jk=1:rep_times
+            x = zeros(L, 1);
+            for i = 1:L 
+                M_corner=10^(1.5*(mcorner_TGR(i)+6.07));                   
+                x(i)=gentgr(2/3*b,1,Mmin_set,M_corner);
+            end
+            M_corner=10^(1.5*(mean_mco(k,j)+6.07));  
+            x_mean=gentgr(2/3*b,L,Mmin_set,M_corner);
+
+            [b_TGR_est(k,j,jk),mcorner_TGR_est(k,j,jk),loglikelihood_TGR_rand]=Estimation_TGR_NR_continuous(x,mmin_set);
+            [b_TGR_est_mean(k,j,jk),mcorner_TGR_est_mean(k,j,jk),loglikelihood_TGR_rand]=Estimation_TGR_NR_continuous(x_mean,mmin_set);
+        end
+        delete(gcp('nocreate'))
+    end    
+end
+
+save('TGR1.mat');
+%}
+
+clc,clear
+close all
+load('TGR1.mat');
+
+load('batlow.mat');
+colormap_input=batlow;
+original_indices = linspace(1, size(colormap_input, 1), size(colormap_input, 1));
+target_indices = linspace(1, size(colormap_input, 1), size1);
+color_plt = interp1(original_indices, colormap_input, target_indices);
+color_catalog_size=summer(size2);
+
+figure('units','normalized','position',[0.1,0.1,0.8,0.8])
+
+subplot(3,3,1);
+mainColors = colormap(lines(size1));
+
+for k=1:size1
+    for j=1:size2
+        L=L0(j);
+        mcorner_TGR=[];
+        blendFactor = 0.9*(1 - j/size2);  % Blending towards white, less so for larger indices
+        gradientColor = mainColors(k, :) + (1 - mainColors(k, :)) * blendFactor;
+
+        for i = 1:L            
+            mcorner_TGR(i)=log10(i)/b-dmcorner_TGR0(k);
+        end
+        h((k-1)*size2+j)=plot((1:1:L)/L,mcorner_TGR,'color',gradientColor,'linewidth',2.5);hold on;
+        [~,ind]=min(abs(mcorner_TGR-mean(mcorner_TGR)));
+        scatter(ind/L,mean(mcorner_TGR),30,gradientColor,'filled');hold on;
+        forleg((k-1)*size2+j) = arrayfun(@(x,y) ['$n=' num2str(x) ', \beta=' num2str(y) '$'], L,dmcorner_TGR0(k), 'UniformOutput', false);
+    end
+end
+grid on;box on; grid minor;
+set(gca, 'fontsize', 16);
+ylim([-1 3]);
+legend(h,forleg, 'NumColumns', 2,'location','southeast', 'Interpreter', 'latex');
+ylabel('$m_{corner}$', 'Interpreter', 'latex');
+xlabel('$i/n$', 'Interpreter', 'latex');
+syms n b beta i
+equation = sprintf('$m_{corner}(i) = \\log_{10}(\\frac{i}{b}) - \\beta$');
+title(equation,'Interpreter','latex');
+
+color_plt=[];
+for j=1:size2
+    for k=1:size1
+        values_mco(:,(j-1)*(2+1)+k) = reshape(mcorner_TGR_est(k,j,:),[],1)-mean_mco(k,j);
+        values_b(:,(j-1)*(2+1)+k)= reshape(b_TGR_est(k,j,:),[],1);
+    end
+    values_mco(:,j*(2+1))=nan;
+    values_b(:,j*(2+1))=nan;
+    
+    color_plt=[color_plt;c;ones(1,3)];
+end
+values_mco=values_mco(:,1:end-1);
+values_b=values_b(:,1:end-1);
+
+%%
+subplot(3,3,4)
+h=boxplot(values_b,'color','k');
+set(findobj(gca,'type','line'),'linew',2)
+h_box=findobj(gca,'Tag','Box');
+for j=1:length(h_box)
+ patch(get(h_box(j),'XData'),get(h_box(j),'YData'),color_plt(j,:),'FaceAlpha',0.5,'EdgeAlpha',0.3);
+end
+hold on;
+for ii = 1:size1
+    plot(NaN,1,'color', color_plt(ii,:), 'LineWidth', 5);
+end
+legend({'$\beta=1$', '$\beta=0.5$'}, 'Interpreter', 'latex');
+xticks([1.5 4.5 7.5 10.5])
+xticklabels({'100', '200', '400', '800'})
+set(gca, 'fontsize', 16);
+ylim([0.5 2]);
+ylabel('$b_{est}/b_{0}$', 'Interpreter', 'latex');xlabel('$n$', 'Interpreter', 'latex'); 
+grid on;box on; grid minor;
+
+%%
+subplot(3,3,7)
+h=boxplot(values_mco,'color','k');
+set(findobj(gca,'type','line'),'linew',2)
+h_box=findobj(gca,'Tag','Box');
+for j=1:length(h_box)
+    patch(get(h_box(j),'XData'),get(h_box(j),'YData'),color_plt(j,:),'FaceAlpha',0.5,'EdgeAlpha',0.3);
+end
+hold on;
+xticks([1.5 4.5 7.5 10.5])
+xticklabels({'100', '200', '400', '800'})
+set(gca, 'fontsize', 16);
+ylim([-0.5 1.5]);
+ylabel('$m_{corner}-m_{corner_{0}}$', 'Interpreter', 'latex');
+xlabel('$n$', 'Interpreter', 'latex'); 
+grid on;box on; grid minor;
+
+
+%%
