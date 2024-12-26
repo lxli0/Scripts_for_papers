@@ -1,0 +1,5 @@
+clc,clear
+main_catalogsize_GR
+main_catalogsize_TGR
+main_incompleteness_GR
+main_incompleteness_TGR
