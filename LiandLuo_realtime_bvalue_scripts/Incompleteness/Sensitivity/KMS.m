@@ -15,9 +15,9 @@ function [b_kms]=KMS(Dm)
         VG0=2*ones(1,L);
         VG0(1)=1;
         VG0(end)=1;
-        VG=VGA(t_Poisson,Dm,left,right,VG0);
+        VG=VGA(t_Poisson,Magn_cal,left,right,VG0);
         % calculate KMS for the generated catalog
-        pl=polyfit(Dm,VG,1);
+        pl=polyfit(Magn_cal,VG,1);
         kms_every(j)=pl(1);
     end
     % calculate the corresponding b-value
