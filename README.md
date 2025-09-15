@@ -3,6 +3,6 @@ I am sharing here the code to reproduce my papers. One can use them to directly 
 
 Folder | Paper 
 --- | ---  
-LiandAvouac_GRvsTGR_script | Li, L., & Avouac, J.P. (submitted). Distinguishing Tapered and Non-Tapered Gutenberg–Richter Distributions.
-Lietal_dc2oc_origin_scripts | Li, L., Li, J., & Song, X. (under review). Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust.
+LiandAvouac_GRvsTGR_script | Li, L., & Avouac, J.P. (2025). Distinguishing Tapered and Non-Tapered Gutenberg–Richter Distributions.
+Lietal_dc2oc_origin_scripts | Li, L., Li, J., & Song, X. (2025). Temporal variations in low-frequency Rayleigh-wave velocities should mostly originate from the shallow crust.
 LiandLuo_realtime_bvalue_scripts | Li, L., & Luo, G. (2024). Can we obtain reliable seismic b-values for real-time catalogs?. Geophysical Journal International 237(3), 1554–1566. doi: 10.1093/gji/ggae124.
