@@ -1,0 +1,102 @@
+usecase	location	operation	country	lon	lat
+0	Blue Mountain	CGR	America	-119.0000	40.0000
+0	Brawley	CGR	America	-115.5303	32.9787
+0	Coso	CGR	America	-117.8161	36.0311
+0	Hengill	CGR	Iceland	-21.0000	64.0000
+0	Molasse Basin	CGR	Germany	11.0000	48.0000
+0	Raft River	CGR	America	-113.0000	42.0000
+0	Salton Sea	CGR	America	-115.8000	33.3000
+0	San Emidio	CGR	America	-119.0000	41.5000  
+1	Basel	EGS	Switzerland	7.5733	47.5584
+0	Cooper Basin-2003	EGS	Australia	141.0035	-26.7255
+1	Cooper Basin-2005	EGS	Australia	142.0040	-26.7260
+1	Cooper Basin-2010	EGS	Australia	141.0045	-27.7265
+1	Cooper Basin-2012	EGS	Australia	141.0050	-25.7270
+1	Geysers	CGR	America	-122.7558	38.7906
+1	Newberry-2014	EGS	America	-121.1000	44.6333
+1	Otaniemi	EGS	Finland	24.8330	60.1833
+1	Paralana	EGS	Australia	139.0000	-30.3000
+1	Pohang	EGS	South Korea	129.3650	36.0322
+1	Rittershoffen	EGS	France	7.9500	48.9000
+1	Soultz-Sous-Forêts-1995	EGS	France	8.8833	48.9333
+1	Soultz-Sous-Forêts-1996	EGS	France	7.8834	47.9334
+1	Soultz-Sous-Forêts-2000	EGS	France	6.8835	48.9335
+1	Soultz-Sous-Forêts-2003	EGS	France	7.8836	49.9336
+1	St.Gallen	EGS	France	9.3748	47.4239
+1	Strasbourg	EGS	France	7.7521	48.5734
+0	Fenton Hill 83	EGS	America	-106.4000	35.8800
+0	Fenton Hill 86	EGS	America	-107.4001	35.8801
+0	Groß Schönebeck	EGS	Germany	13.5000	52.8000
+0	Newberry-2012	EGS	America	-122.1001	44.6334  
+0	Soultz-Sous-Forêts-1993	EGS	France	6.8832	48.9332  
+0	Soultz-Sous-Forêts-2003 circulation	EGS	France	8.8837	48.9337  
+0	Soultz-Sous-Forêts-2004	EGS	France	7.8838	47.9338  
+0	Soultz-Sous-Forêts-2005	EGS	France	7.8839	49.9339  
+0	Soultz-Sous-Forêts-2010	EGS	France	6.8840	48.9340  
+0	Berlin	EGS	El Salvador	-88.5000	13.7000
+1	Utah FORGE-2022	EGS	America	-113.5000	38.4220  
+1	Utah FORGE-2023	EGS	America	-112.5001	39.4221  
+0	Eagle west	EOR	Canada	-114.0000	52.0000
+1	Cen'gong	HF	China	108.0000	26.0000
+1	Crooked Lake	HF	Canada	-102.7370	50.6050
+1	Harrison	HF	America	-93.1077	36.2298
+1	ToC2ME	HF	Canada	-110.0000	53.0000
+0	Bowland Shale	HF	England	-2.5000	53.8333
+0	Duvernay East Shale Basin	HF	Canada	-115.0000	54.0000
+0	Garvin	HF	America	-97.0000	34.5000
+0	Goodfellow	HF	Laboratory	-0.1000	51.5000
+0	Neuquén Basin	HF	Argentina	-68.0000	-38.5000
+0	Preston New Road 1	HF	England	-1.9000	53.8000  
+0	Preston New Road 2	HF	England	-2.9001	52.8001  
+1	Bedretto-Int10-PH1	Scientific	Switzerland	8.5105	46.5057
+1	Bedretto-Int11-PH2A	Scientific	Switzerland	9.5106	46.5058  
+1	Bedretto-Int11-PH2B	Scientific	Switzerland	8.5107	47.5059  
+1	Bedretto-Int7-PH1	Scientific	Switzerland	7.5108	46.5060  
+1	Bedretto-Int8-PH2	Scientific	Switzerland	8.5109	45.5061  
+1	Bedretto-Int9-10-PH2	Scientific	Switzerland	7.5110	46.5062  
+1	Grimsel-HS4	Scientific	Switzerland	8.3390	46.5620
+1	Grimsel-HS5	Scientific	Switzerland	9.3391	46.5621  
+1	Grimsel-HS8	Scientific	Switzerland	8.3392	47.5622  
+0	Aspo	Scientific	Sweden	17.6000	58.8000
+0	Bedretto (Int8-Phase1, Int9-Phase1, Int11-Phase1, Int12-Phase1, Int12-Phase2, Int12-Phase3, Int13-Phase1, Int14-Phase1)	Scientific	Switzerland	7.5111	45.5063  /lat
+0	Grimsel-HS1, HS2, HS3, HF2, HG3, HF5, HF6, HHF8	Scientific	Switzerland	9.3393	47.5623  /lat
+0	KTB 1994	Scientific	Germany	11.6000	49.8000
+0	KTB2000	Scientific	Germany	12.6001	49.8001  
+0	LSBB	Scientific	America	-118.0000	34.5000
+1	Castor	UGS	Spain	0.5000	40.5000
+1	Decatur	UGS	America	-88.9548	39.8403
+0	Cornegliano Stoccaggio	UGS	Italy	9.0000	45.0000
+0	Hutubi	UGS	China	87.0000	43.0000
+0	In Salah	UGS	Algeria	2.5000	27.2000
+0	Stage 2C of the CO2CRC Otway Project	UGS	Australia	142.8000	-38.5000
+0	Ashtabula	WFD	America	-80.7800	41.8800
+0	Azle-Reno	WFD	America	-97.5000	32.9000
+0	Cordel	WFD	Canada	-113.5000	53.5000
+0	Cushing	WFD	America	-96.7667	35.9833
+0	Dallas Fort Worth	WFD	America	-96.7970	32.7767
+0	Fairview	WFD	America	-98.5000	36.3000
+0	Greeley	WFD	America	-104.7000	40.4000
+0	Harper	WFD	America	-98.0000	37.3000
+0	Irving	WFD	America	-96.9500	32.8100
+0	Love County	WFD	America	-97.2000	33.9000
+0	Milan	WFD	America	-88.7500	35.4000
+0	Painsville	WFD	America	-81.2500	41.7000
+0	Paradox Valley	WFD	America	-108.9000	38.3000
+0	Pawnee	WFD	America	-96.8000	36.3000
+0	Peace River	WFD	Canada	-117.3000	56.2000
+0	Prague	WFD	America	-96.7000	35.5000
+0	Puerto Gaitan	WFD	Columbia	-71.9000	4.3000
+0	Raton Basin	WFD	America	-104.5000	37.0000
+0	Reeves	WFD	America	-103.7000	31.3000
+0	Rocky Mountain Arsenal	WFD	America	-104.8300	39.8300
+0	Rongchang	WFD	China	105.6000	29.4000
+0	Timpson	WFD	America	-94.4000	31.9000
+0	Venus	WFD	America	-97.1000	32.4000
+0	Youngstown	WFD	America	-80.6500	41.1000
+0	Graham	WFD	Canada	-118.5000	49.1000
+0	Cogdell	WFD	America	-100.5000	32.3000
+1	Guthrie	WFD	America	-97.4253	35.8789
+1	Guy-Greenbrier-Jul2010	WFD	America	-92.3892	35.2294
+1	Guy-Greenbrier-Feb2011	WFD	America	-93.3892	35.2294
+1	Musreau Lake	WFD	Canada	-118.6170	54.5500
+1	Val d'Agri	WFD	Italy	15.8000	40.3000
