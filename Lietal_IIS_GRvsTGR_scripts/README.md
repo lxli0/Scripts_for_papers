@@ -5,4 +5,4 @@ Some of the earthquake catalogs we collected cannot be shared publicly because o
 
 We are pleased to answer any questions (email: lxli@caltech.edu or lucas.linxuan.li@gmail.com).
 
-Reference: inxuan Li, Kyungjae Im, and Jean-Philippe Avouac (in submission). Tapering of large-magnitude events in induced earthquake sequences.
+Reference: Linxuan Li, Kyungjae Im, and Jean-Philippe Avouac (in submission). Tapering of large-magnitude events in induced earthquake sequences.
